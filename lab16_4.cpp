@@ -17,3 +17,14 @@ int main(){
 	
 	return 0;
 }
+void shuffle(int &x ,int &y, int &z, int &s)
+{
+    int *money[]={&x,&y,&z,&s};
+    for(int i=0;i<4;i++)
+    {
+        int r=rand()%4;
+        int save=*money[i];
+        *money[i]=*money[r];
+        *money[r]=save;
+    }
+}
